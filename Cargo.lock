@@ -368,7 +368,6 @@ dependencies = [
 [[package]]
 name = "multires_rs"
 version = "0.1.0"
-source = "git+https://github.com/nicholasbl/multires_rs.git#543f52e344a9b2725a7d2ba84c37806a36d44fde"
 dependencies = [
  "anyhow",
  "clap",

@@ -5,4 +5,4 @@
 
 mod parser;
 
-pub use parser::{VtiImportOptions, VtiImportTimings, read_vti};
+pub use parser::{VtiImportOptions, VtiImportTimings, import_vti};

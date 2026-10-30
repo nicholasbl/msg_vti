@@ -51,7 +51,7 @@ impl Timer {
 }
 
 /// Read one VTK ImageData (`.vti`) timestep into an owned MSG dataset.
-pub fn read_vti(
+pub fn import_vti(
     path: impl AsRef<Path>,
     options: &VtiImportOptions,
 ) -> Result<(MsgDataset, VtiImportTimings)> {
@@ -1064,7 +1064,7 @@ mod tests {
             .ok()
             .map(|names| names.split(',').map(str::to_owned).collect())
             .unwrap_or_default();
-        let (dataset, _) = read_vti(path, &VtiImportOptions { fields }).unwrap();
+        let (dataset, _) = import_vti(path, &VtiImportOptions { fields }).unwrap();
         dataset.validate().unwrap();
         assert!(!dataset.fields().is_empty());
     }
